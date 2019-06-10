@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Nav({url, text}) {
+export default function Nav({content}) {
     return (
-        <a href={url}>{text}</a>
+        <li>{content.name}</li>
     )
 }
