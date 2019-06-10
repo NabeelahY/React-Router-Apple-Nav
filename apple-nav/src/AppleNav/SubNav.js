@@ -12,7 +12,7 @@ const kf = keyframes`
 const SubNavStyle = styled.div`
   opacity: 0;
   transform: translateX(100%);
-  animation: ${kf} 1s ease-out forwards;
+  animation: ${kf} 0.5s ease-out forwards;
   display: flex;
   justify-content: space-around;
   align-content: center;

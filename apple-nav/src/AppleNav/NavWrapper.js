@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
-import AppleData from '../navData'
+import AppleData from "../navData";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 // import SubNav from "./SubNav";
@@ -18,7 +18,7 @@ const NavStyle = styled.div`
     color: #fff;
 
     li {
-        list-style: none;
+      list-style: none;
     }
   }
 `;
@@ -39,12 +39,12 @@ export default class NavWrapper extends Component {
   render() {
     return (
       <NavStyle>
-        <a href="https://www.apple.com">
+        <Link to="/">
           <img
             src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/apple/image_large.svg"
             alt="Apple logo"
           />
-        </a>
+        </Link>
         {this.state.products.map(product => (
           <NavBarLink key={product.name} product={product} />
         ))}
@@ -56,7 +56,7 @@ export default class NavWrapper extends Component {
 function NavBarLink({ product }) {
   return (
     <Link to={`/${product.name.toLowerCase()}`}>
-      <Nav content={product}/>
+      <Nav content={product} />
     </Link>
   );
 }
