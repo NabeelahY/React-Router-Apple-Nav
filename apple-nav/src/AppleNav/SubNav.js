@@ -12,7 +12,7 @@ const kf = keyframes`
 const SubNavStyle = styled.div`
   opacity: 0;
   transform: translateX(100%);
-  animation: ${kf} 0.5s ease-out forwards;
+  animation: ${kf} 1s ease-out forwards;
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -27,14 +27,12 @@ const SubNavStyle = styled.div`
 `;
 
 const SubNav = props => {
-  //   console.log(props);
   const productName = props.match.params.name;
 
   const filterProduct = AppleData.find(
     product => product.name.toLowerCase() === productName
   );
 
-  //   console.log(filterProduct.subLinks);
   return (
     <SubNavStyle>
       {filterProduct.subLinks.map(product => (

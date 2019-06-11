@@ -3,7 +3,6 @@ import Nav from "./Nav";
 import AppleData from "../navData";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import SubNav from "./SubNav";
 
 const NavStyle = styled.div`
   background-color: #2d2d2d;
